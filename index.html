@@ -21,6 +21,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>key1: <span id="key1">no value</span></p>
         <p>key2: <span id="key2">no value</span></p>
     </div>
+ <script>
+        // 这个函数将被GTM调用以显示参数值
+        function displayParameters(key1, key2) {
+            if(key1) document.getElementById('key1').textContent = key1;
+            if(key2) document.getElementById('key2').textContent = key2;
+        }
+    </script>
 
 </body>
 </html>
